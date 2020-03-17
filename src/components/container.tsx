@@ -1,6 +1,7 @@
 import React from 'react';
-import { Row, Col, Container as Cont } from 'react-bootstrap';
+import { Row, Container as Cont } from 'react-bootstrap';
 import { SideNav } from './sidenav';
+import {Content} from './content';
 
 
 export const Container = () => {
@@ -8,14 +9,10 @@ export const Container = () => {
       <React.Fragment>
         <Cont fluid>
           <Row>
-            <Col sm="2">
               <SideNav />
-            </Col>
-            <Col>
-                <div className="page-content">      
-                    
-                </div>
-            </Col>
+              <Content contentTitle='Dashboard'>
+                <p>Conent goes here</p>
+              </Content>
           </Row>
         </Cont>
       </React.Fragment>

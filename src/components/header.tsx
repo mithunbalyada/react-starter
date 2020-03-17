@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../assets/ubs-logo-svg.svg';
 
 
 interface HeaderProps{
@@ -11,7 +12,13 @@ export const Header: React.FC<HeaderProps> = ({title}) => {
       <React.Fragment>
         <nav className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
           <a className="navbar-brand col-sm-3 col-md-2 mr-0" href="/#">
-            {title}
+            <img
+              src={Logo}
+              width="50"
+              height="50"
+              className="d-inline-block align-center"
+              alt="UBS Logo"
+            /> {` ${title}`}
           </a>
 
           <ul className="navbar-nav px-3">

@@ -15,41 +15,39 @@ export const SideNav = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="/#">
-                  <Icon.Archive size={15}/> Testlab
+                <a className="nav-link" href="/#">
+                  <Icon.Archive size={15} className='feather'/> Testlab
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="/#">
-                  <Icon.BarChart2 size={15}/> Reports
+                <a className="nav-link" href="/#">
+                  <Icon.BarChart2 size={15} className='feather'/> Reports
                 </a>
               </li>
             </ul>
 
             <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
               <span>Available resources</span>
-              <a className="d-flex align-items-center text-muted" href="/#"> <Icon.PlusCircle size={15}/>
-              </a>
             </h6>
             <ul className="nav flex-column mb-2">
               <li className="nav-item">
                 <a className="nav-link" href="/#">
-                  <Icon.Grid size={15}/> Cutdown dataset
+                  <Icon.Grid size={15} className='feather'/> Cutdown dataset
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/#">
-                <Icon.BookOpen size={15}/> Static Data
+                <Icon.BookOpen size={15} className='feather'/> Static Data
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/#">
-                <Icon.BookOpen size={15}/> Application versions
+                <Icon.BookOpen size={15} className='feather'/> App. versions
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/#">
-                  <Icon.Book size={15}/> Change logs
+                  <Icon.Book size={15} className='feather'/> Change logs
                 </a>
               </li>
             </ul>
