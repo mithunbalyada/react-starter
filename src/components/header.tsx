@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from 'react-bootstrap';
+
 
 interface HeaderProps{
     title: string;
@@ -9,15 +9,19 @@ export const Header: React.FC<HeaderProps> = ({title}) => {
 
     return (
       <React.Fragment>
-        <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="#home">{title}</Navbar.Brand>
-          <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              Signed in as: <a href="#login">None</a>
-            </Navbar.Text>
-          </Navbar.Collapse>
-        </Navbar>
+        <nav className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+          <a className="navbar-brand col-sm-3 col-md-2 mr-0" href="/#">
+            {title}
+          </a>
+
+          <ul className="navbar-nav px-3">
+            <li className="nav-item text-nowrap">
+              <a className="nav-link" href="/#">
+                Sign in
+              </a>
+            </li>
+          </ul>
+        </nav>
       </React.Fragment>
     );
 }

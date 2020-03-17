@@ -1,48 +1,60 @@
 import React from 'react';
-import { faHome, faTachometerAlt, faMagic } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import * as Icon from 'react-feather';
+
 
 export const SideNav = () => {
     
     return (
       <React.Fragment>
-        <div className="vertical-nav bg-white" id="sidebar">
-          <div className="py-4 px-3 mb-4 bg-light">
-            <div className="media d-flex align-items-center">
-              <img
-                src=""
-                alt="..."
-                width="65"
-                className="mr-3 rounded-circle img-thumbnail shadow-sm"
-              />
-              <div className="media-body">
-                <h4 className="m-0">Username</h4>
-                <p className="font-weight-light text-muted mb-0">user role</p>
-              </div>
-            </div>
+        <nav className="col-md-2 d-none d-md-block bg-light sidebar">
+          <div className="sidebar-sticky">
+            <ul className="nav flex-column">
+              <li className="nav-item">
+                <a className="nav-link active" href="/#">
+                  <Icon.Layers size={15}/> Dashboard <span className="sr-only">(current)</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" href="/#">
+                  <Icon.Archive size={15}/> Testlab
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" href="/#">
+                  <Icon.BarChart2 size={15}/> Reports
+                </a>
+              </li>
+            </ul>
+
+            <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Available resources</span>
+              <a className="d-flex align-items-center text-muted" href="/#"> <Icon.PlusCircle size={15}/>
+              </a>
+            </h6>
+            <ul className="nav flex-column mb-2">
+              <li className="nav-item">
+                <a className="nav-link" href="/#">
+                  <Icon.Grid size={15}/> Cutdown dataset
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/#">
+                <Icon.BookOpen size={15}/> Static Data
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/#">
+                <Icon.BookOpen size={15}/> Application versions
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/#">
+                  <Icon.Book size={15}/> Change logs
+                </a>
+              </li>
+            </ul>
           </div>
-
-          <ul className="nav flex-column bg-white mb-0">
-            <li className="nav-item">
-              <a href="/#" className="nav-link text-dark font-italic bg-light">
-                <FontAwesomeIcon icon={faHome} /> Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="/#" className="nav-link text-dark font-italic">
-                <FontAwesomeIcon icon={faTachometerAlt} /> Dashboard
-              </a>
-            </li>
-          </ul>
-
-          <ul className="nav flex-column bg-white mb-0">
-            <li className="nav-item">
-              <a href="/#" className="nav-link text-dark font-italic">
-                <FontAwesomeIcon icon={faMagic}/> Additional Menu
-              </a>
-            </li>
-          </ul>
-        </div>
+        </nav>
       </React.Fragment>
     );
 
